@@ -4,9 +4,16 @@
     <script src="behaviour.js"></script>
 </head>
 <body>
+    <label >Nombre</label>
     <input id="nombre" type="text" onchange="validateName('nombre')" placeholder="nombre">
+    <label >Apellido</label>
     <input id="apellido" type="text" onchange='validateName("apellido")' placeholder="apellido">
 	<input id="email" type="text" onchange='validateName("email")' placeholder="email">
+
+    <label >Direccion</label>
+    <input id='dir' type="text" onchange="validateDireccion('dir')">
+    <label >Cedula</label>
+    <input id="cc" type="text" onchange="cedulaUser('cc')">
 
     <div style="background-color: rgba(255, 0, 0, 0.767); border-radius: 15px; visibility: hidden; position: absolute;" id="tooltip">
         <label> Solo se admiten 25 caracteres</label>
