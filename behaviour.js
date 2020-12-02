@@ -21,10 +21,6 @@ function validateDireccion(id){
             textfield.style.borderColor = 'rgb(255,0,0)';//rojo
         }
     }
-       
-    
-    
-
 }
 function cedulaUser(id){
     var element = document.getElementById(id);
