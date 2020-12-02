@@ -22,13 +22,16 @@ function validateDireccion(id){
 }
 function cedulaUser(id){
     var element = document.getElementById(id);
-    var charRare = isNaN(parseInt(element.value,2));//caracteres extraños, son los que no se pueden castear a numeros
-
-    if (element.value > 20 || charRare){//cuando tiene una longitud mayor de 20 char
-        element.style.borderColor = rgb(255,0,0);//rojo
+    var charRare = isNaN(parseInt(element.value,10));//caracteres extraños, son los que no se pueden castear a numeros
+    console.log(charRare);
+    console.log(element.value.length);
+    if (element.value.length > 20 || charRare){//cuando tiene una longitud mayor de 20 char
+        element.style.borderColor = 'rgb(255,0,0)';//rojo
     }else{
-        if (element.value < 20 && element.value > 10){
-            element.style.borderColor = rgb(0,255,0);//verde
+        if (element.value.length <= 20 && element.value.length >= 10){
+            element.style.borderColor = 'rgb(0,255,0)';//verde
+        }else{
+            element.style.borderColor = 'rgb(255,0,0)';//rojo
         }
     }
 }
