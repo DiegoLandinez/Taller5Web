@@ -12,13 +12,19 @@ function validateName(id){
 
 function validateDireccion(id){
     var textfield = document.getElementById(id);
-    if (textfield.value.indexOf("cll") == 0){
-        textfield.style.borderColor =  "rgb(255, 0, 0)";
+    var array = ['cll','cra','av','anv','trans']
+    for (let index = 0; index < array.length; index++) {
+         if (textfield.value.indexOf(array[index]) == 0){
+            textfield.style.borderColor =  "rgb(0, 255, 0)";//verde
+            break;//se sale del for
+        }else{
+            textfield.style.borderColor = 'rgb(255,0,0)';//rojo
+        }
     }
-    if (textfield.value.indexOf("cra")){}
-    if (textfield.value.indexOf("av")){}
-    if (textfield.value.indexOf("anv")){}
-    if (textfield.value.indexOf("trans")){}
+       
+    
+    
+
 }
 function cedulaUser(id){
     var element = document.getElementById(id);
