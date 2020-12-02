@@ -8,13 +8,14 @@
     <input id="nombre" type="text" onchange="validateName('nombre')" placeholder="nombre">
     <label >Apellido</label>
     <input id="apellido" type="text" onchange='validateName("apellido")' placeholder="apellido">
-	<label >Email</label>
-	<input id="email" type="text" onchange='validateName("email")' placeholder="email">
-
     <label >Direccion</label>
     <input id='dir' type="text" onchange="validateDireccion('dir')">
     <label >Cedula</label>
     <input id="cc" type="text" onchange="cedulaUser('cc')">
+	<label >Contraseña</label>
+	<input id="ccpaswd" type="text" onchange='validatePass("contrasena")' placeholder="contrasena">
+	<label >Email</label>
+	<input id="email" type="text" onchange='validateEmail("email")' placeholder="email">
 
     <div style="background-color: rgba(255, 0, 0, 0.767); border-radius: 15px; visibility: hidden; position: absolute;" id="tooltip">
         <label> Solo se admiten 25 caracteres</label>
@@ -22,6 +23,10 @@
 	
 	<div style="background-color: rgba(255, 0, 0, 0.767); border-radius: 15px; visibility: hidden; position: absolute;" id="toooltip">
         <label> Solo se admiten 120 caracteres</label>
+    </div>
+	
+	<div style="background-color: rgba(255, 0, 0, 0.767); border-radius: 15px; visibility: hidden; position: absolute;" id="toltip">
+        <label> La contraseña debe ser mayor a 15 caracteres y menor de 20 caracteres</label>
     </div>
 </body>
 </html>

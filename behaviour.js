@@ -12,12 +12,24 @@ function validateName(id){
 
 function validateEmail(id){
     var textfield = document.getElementById(id);
-    if (textfield.value.length > 120){
+    if (textfield.value.length > 120 ||  textfield.value.length < 1){
         textfield.value = textfield.value.substr(0,119);
         textfield.style.borderColor =  "rgb(255, 0, 0)";
         document.getElementById("toooltip").style.visibility = "visible";
     }else{
         document.getElementById("toooltip").style.visibility = "hidden";
+        textfield.style.borderColor =  "black";
+    }
+}
+
+function validatePass(id){
+    var textfield = document.getElementById(id);
+    if (textfield.value.length > 20 ||  textfield.value.length < 15){
+        textfield.value = textfield.value.substr(0,19);
+        textfield.style.borderColor =  "rgb(255, 0, 0)";
+        document.getElementById("toltip").style.visibility = "visible";
+    }else{
+        document.getElementById("toltip").style.visibility = "hidden";
         textfield.style.borderColor =  "black";
     }
 }
