@@ -12,7 +12,7 @@ function validateName(id){
 
 function validateDireccion(id){
     var textfield = document.getElementById(id);
-    var array = ['cll','cra','av','anv','trans']
+    var array = ['cll','cra','av','anv','trans'];
     for (let index = 0; index < array.length; index++) {
          if (textfield.value.indexOf(array[index]) == 0){
             textfield.style.borderColor =  "rgb(0, 255, 0)";//verde
