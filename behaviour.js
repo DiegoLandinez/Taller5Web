@@ -10,6 +10,18 @@ function validateName(id){
     }
 }
 
+function validateEmail(id){
+    var textfield = document.getElementById(id);
+    if (textfield.value.length > 120){
+        textfield.value = textfield.value.substr(0,119);
+        textfield.style.borderColor =  "rgb(255, 0, 0)";
+        document.getElementById("toooltip").style.visibility = "visible";
+    }else{
+        document.getElementById("toooltip").style.visibility = "hidden";
+        textfield.style.borderColor =  "black";
+    }
+}
+
 function validateDireccion(id){
     var textfield = document.getElementById(id);
     var array = ['cll','cra','av','anv','trans'];
