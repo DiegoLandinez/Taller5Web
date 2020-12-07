@@ -63,17 +63,17 @@ function cedulaUser(id){
 }
 
 function showFav(){
-    var C1 = document.getElementsByTagName('C1').checked;
-    var C2 = document.getElementsByTagName('C2').checked;
-    var C3 = document.getElementsByTagName('C3').checked;
+    var C1 = document.getElementsById('C1').checked;
+    var C2 = document.getElementsById('C2').checked;
+    var C3 = document.getElementsById('C3').checked;
 
-    var M1 = document.getElementsByTagName('M1').checked;
-    var M2 = document.getElementsByTagName('M2').checked;
-    var M3 = document.getElementsByTagName('M3').checked;
+    var M1 = document.getElementsById('M1').checked;
+    var M2 = document.getElementsById('M2').checked;
+    var M3 = document.getElementsById('M3').checked;
 
-    var E1 = document.getElementsByTagName('E1').checked;
-    var E2 = document.getElementsByTagName('E2').checked;
-    var E3 = document.getElementsByTagName('E3').checked;
+    var E1 = document.getElementsById('E1').checked;
+    var E2 = document.getElementsById('E2').checked;
+    var E3 = document.getElementsById('E3').checked;
  
     var disp = (C1||C2||C3)&&(M1||M2||M3)&&(E1||E2||E3);
 
