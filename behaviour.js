@@ -61,3 +61,25 @@ function cedulaUser(id){
         }
     }
 }
+
+function showFav(){
+    var C1 = document.getElementsByTagName('C1').checked;
+    var C2 = document.getElementsByTagName('C2').checked;
+    var C3 = document.getElementsByTagName('C3').checked;
+
+    var M1 = document.getElementsByTagName('M1').checked;
+    var M2 = document.getElementsByTagName('M2').checked;
+    var M3 = document.getElementsByTagName('M3').checked;
+
+    var E1 = document.getElementsByTagName('E1').checked;
+    var E2 = document.getElementsByTagName('E2').checked;
+    var E3 = document.getElementsByTagName('E3').checked;
+ 
+    var disp = (C1||C2||C3)&&(M1||M2||M3)&&(E1||E2||E3);
+
+    if(disp == true){
+        document.getElementById('Precio').style.display="block";
+    }else {
+        document.getElementById('Precio').style.display="none";
+    }
+    }
