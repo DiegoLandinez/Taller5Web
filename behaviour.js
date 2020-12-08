@@ -80,6 +80,6 @@ function showFav(){
     if(disp == true){
         document.getElementById('Precio').style.display="block;";
     }else {
-        document.getElementById('Precio').style.display="none";
+        document.getElementById('Precio').style.display="none;";
     }
     }
