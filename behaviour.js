@@ -78,7 +78,7 @@ function showFav(){
     var disp = (C1||C2||C3)&&(M1||M2||M3)&&(E1||E2||E3);
 
     if(disp == true){
-        document.getElementById('Precio').style.display="block";
+        document.getElementById('Precio').style.display="block;";
     }else {
         document.getElementById('Precio').style.display="none";
     }
