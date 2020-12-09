@@ -86,3 +86,5 @@ function showFav(){
         document.getElementById('Precio').style.display="none";
     }
 }
+
+
