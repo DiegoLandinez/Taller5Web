@@ -63,23 +63,26 @@ function cedulaUser(id){
 }
 
 function showFav(){
-    var C1 = document.getElementsById('C1').checked;
-    var C2 = document.getElementsById('C2').checked;
-    var C3 = document.getElementsById('C3').checked;
+    
 
-    var M1 = document.getElementsById('M1').checked;
-    var M2 = document.getElementsById('M2').checked;
-    var M3 = document.getElementsById('M3').checked;
+    var C1 = document.getElementById('C1').checked;
+    var C2 = document.getElementById('C2').checked;
+    var C3 = document.getElementById('C3').checked;
 
-    var E1 = document.getElementsById('E1').checked;
-    var E2 = document.getElementsById('E2').checked;
-    var E3 = document.getElementsById('E3').checked;
+    var M1 = document.getElementById('M1').checked;
+    var M2 = document.getElementById('M2').checked;
+    var M3 = document.getElementById('M3').checked;
+
+    var E1 = document.getElementById('E1').checked;
+    var E2 = document.getElementById('E2').checked;
+    var E3 = document.getElementById('E3').checked;
  
     var disp = (C1||C2||C3)&&(M1||M2||M3)&&(E1||E2||E3);
-
+    console.log(disp);
     if(disp == true){
-        document.getElementById('Precio').style.display="block;";
+        console.log(document.getElementById('Precio'));
+        document.getElementById('Precio').style.display="block";
     }else {
-        document.getElementById('Precio').style.display="none;";
+        document.getElementById('Precio').style.display="none";
     }
-    }
+}
