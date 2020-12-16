@@ -14,13 +14,9 @@
     <label >Cedula</label>
     <input id="cc" type="text" onchange="cedulaUser('cc')">
 	<label >Contraseña</label>
-	<input id="ccpaswd" type="text" onchange='validatePass("contrasena")' placeholder="contrasena">
+	<input id="ccpaswd" type="text" onchange='validatePass("ccpaswd")' placeholder="contrasena">
 	<label >Email</label>
 	<input id="email" type="text" onchange='validateEmail("email")' placeholder="email">
-
-    <div id="multi" class="multi-range" data-max="250" data-min="0" width="200px">
-        <!--slider-->
-    </div>
     
     <div style="background-color: rgba(255, 0, 0, 0.767); border-radius: 15px; visibility: hidden; position: absolute;" id="tooltip">
         <label> Solo se admiten 25 caracteres</label>
@@ -31,9 +27,9 @@
     </div>
 	
 	<div style="background-color: rgba(255, 0, 0, 0.767); border-radius: 15px; visibility: hidden; position: absolute;" id="toltip">
-        <label> La contraseña debe ser mayor a 15 caracteres y menor de 20 caracteres</label>
+        <label> La contraseña debe contener a 15 a 20 caracteres, Mayusculas,
+                numeros , letras o [#,%,/,&]</label>
     </div>
-
 
     <br> <br> 
     <p>Color Favorito:<p>
@@ -90,9 +86,3 @@
     </div>
 </body>
 </html>
-
-<script>
-    $(document).ready(function () {
-        $('#multi').
-    });
-</script>

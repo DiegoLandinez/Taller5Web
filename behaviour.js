@@ -24,14 +24,33 @@ function validateEmail(id){
 
 function validatePass(id){
     var textfield = document.getElementById(id);
-    if (textfield.value.length > 20 ||  textfield.value.length < 15){
-        textfield.value = textfield.value.substr(0,19);
+    var lengthClave = textfield.value.length >= 15 && textfield.value.length <= 20;
+    if ( lengthClave && ContainsUppercase(textfield.value) && ContainsNumber(textfield.value)){
+        //textfield.value = textfield.value.substr(0,19);
+        document.getElementById("toltip").style.visibility = "hidden";
+        textfield.style.borderColor =  "rgb(0, 255, 0)";
+    }else{
         textfield.style.borderColor =  "rgb(255, 0, 0)";
         document.getElementById("toltip").style.visibility = "visible";
-    }else{
-        document.getElementById("toltip").style.visibility = "hidden";
-        textfield.style.borderColor =  "black";
     }
+}
+function ContainsUppercase(palabra){
+    for (let i = 0; i < palabra.length; i++) {
+         if (palabra[i] === palabra[i].toUpperCase()){
+            console.log("contiene mayusculas");
+            return true;
+        }
+    }
+    return false;
+}
+function ContainsNumber(palabra){
+    for (let i = 0; i < palabra.length; i++) {
+        if (!isNaN(parseInt(palabra[i],10))){
+           console.log("contiene numeros ");
+           return true;
+        }
+   }
+   return false;
 }
 
 function validateDireccion(id){
